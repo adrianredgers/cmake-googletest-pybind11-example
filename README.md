@@ -6,6 +6,7 @@ Example project to import a C++ function googletest-ed  into Python using pybind
 - **in-source** vs **out-of-source**:
 - **CLion tips**
 - **CMake**
+- **Contact**
 
 
 **Python**
@@ -28,23 +29,23 @@ Type "help", "copyright", "credits" or "license" for more information.
 ``` 
 
 **Project targets**
-- These are created in the directory `build` by script  `compile.sh`. 
-- CLion also builds them (kind of: see **Clion tips** below).
+- There are 3 targets, they are created in the directory `build` by the script  `compile.sh`. 
+- CLion also builds two of them, kind of (see **Clion tips** below).
 - CMake target `FactorialLib` builds the shared library: `libFactorialLib.so` , which is used by tests and the Python module.
 - CMake target `myfactorial` builds the Python module (shared library) `myfactorial.so`
     - A custom-command then copies it to your system's Python distribution directory.
-    - This is something like `/usr/local/lib/python2.7/dist-packages`. 
-    - You will need permissions to copy to this dir (I used `sudo chmod a+w`). 
+    - That dir is something like `/usr/local/lib/python2.7/dist-packages`. 
+    - You will need permissions to copy to the dir (I used `sudo chmod a+w`). 
 - CMake target `runUnitTests` builds an executable that runs the unit tests.
 
 
 **Project files**
 - `CMakeLists.txt` - top-level CMake file that calls the other 2 CMake files.
-- `compile.sh` - creates `.build` directory, runs `cmake` and then `make` targets.
+- `compile.sh` - creates `build` directory, runs `cmake` and then `make`.
 - `src/main`
-    - `CMakeLists.txt` - CMake for the main targets: `FactorialLib` and `myfactorial`, which it then copies to your system's Python distribution dir.
-    - `Factorial.cpp Factorial.h` - C++ source of function that we want to import into Python.
-    - `PyModule.cpp` - defines interface to our C++ library in Python module `myfactorial`.
+    - `CMakeLists.txt` - CMake for the main targets: `FactorialLib` and `myfactorial`.
+    - `Factorial.cpp Factorial.h` - C++ source of the function that we want to import into Python.
+    - `PyModule.cpp` - defines interface to our C++ library `libFactorial.so` ` ` in the Python module `myfactorial.so`.
     - `lib/pybind11` - pybind11 source cloned from: `git@github.com:pybind/pybind11.git`.
         - Delete its .git file, and then rename it if necessary so your git picks it up.
 - `src\include`
@@ -64,13 +65,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 **in-source** vs **out-of-source** builds
 - An **in-source** build creates build artifacts next to files in the source tree.
 - An **out-of-source** build creates build artifacts in a directory (structure) you choose.
-- We want to use an **out-of-source** build
+- We want to use an **out-of-source** build so we can easily remove and re-generate all build artifacts.
 - The script `compile.sh` does this by creating a directory, `cd`-ing to it and running `CMake` and `make` from there.
-- CLion builds out-of-source in the directory `cmake-build-debug` by default, but you can change this (see **CLion Tips** below).
+- By default CLion builds out-of-source in the directory `cmake-build-debug`, but you can change this (see **CLion Tips** below).
 
 
 **CLion tips:**
-- [Can't edit any files? Get rid of VIM by removing the VIM plugin.]
+- [Don't know why you can't edit any files? CLion uses VIM by default. Get rid of VIM by removing the VIM plugin.]
 - Clone this template project from GitHub, then clone it locally:
   - `git clone myFirstClion <new-directory>`.
 - Navigate to the new project and open it in CLion:
@@ -97,5 +98,9 @@ Type "help", "copyright", "credits" or "license" for more information.
     - Some details of this in `https://github.com/pybind/pybind11/issues/587`.
 - Note the use of keywords like `SHARED` and `PRIVATE`.
 
+**Contact me**
+- This is my first attempt at a lot of things - CMake, CLion, googletest, python, pybind11, C++, GitHub, README ml, Licences.
+- I would be grateful for any suggestions:-
+- aredgers@yahoo.com
         
 
