@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.5)
 set(CMAKE_CXX_STANDARD 11)
 
+# Supposed to make it multi-platform
+include(GNUInstallDirs)
+
 # Directory in which to place our targets: runUnittests, libFactorialLib.so, myfactorial.so
 set(TARGET_DIR ${CMAKE_SOURCE_DIR}/build)
 #
-# I wish we could force and "out-of-source" build from here in CMake, but we cannot, we need a script (compile.sh)   :-(
-#
-# Also need to set up an out-of-source build in CLion, else it can create artifacts within the source tree:
-# Menu: File>Settings>Build,Execution,Deployment>CMake
-# set "Generation path" to the directory name "build" (no quotes)
-#
+# I wish we could force an "out-of-source" build from here in CMake, but we cannot, we need to use a
+# script (compile.sh) to cd to a build directory and make from there.   :-(
+# TODO fix it
 
 project(myFirstClion)
 set(MY_LIB FactorialLib)
