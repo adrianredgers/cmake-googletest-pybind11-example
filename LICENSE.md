@@ -1,7 +1,8 @@
 
 I, Adrian Redgers, created this project in April 2018.
 
-I am publishing it in order to add to the sum of knowledge.
+I am publishing it for my own amusement, kudos, and 
+to add to the sum of knowledge.
 
 My intention is that anyone should be allowed to copy it, edit it 
 and use it for free in their projects private or commercial.
