@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 set(CMAKE_CXX_STANDARD 11)
 
-# Supposed to make it multi-platform
+# Supposed to make it multi-platform - works fine without it in Ubuntu.
 include(GNUInstallDirs)
 
 # Directory in which to place our targets: runUnittests, libFactorialLib.so, myfactorial.so
