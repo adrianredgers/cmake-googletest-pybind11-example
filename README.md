@@ -1,4 +1,4 @@
-Example project to import a C++ function googletest-ed  into Python using pybind11:
+Example project to import a googletested C++ function into Python using pybind11 :-
 -
 - **Python**
 - **Project targets**
