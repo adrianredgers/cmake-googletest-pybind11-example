@@ -1,0 +1,7 @@
+
+#ifndef MYFIRSTCLION_FACTORIALLIB_H
+#define MYFIRSTCLION_FACTORIALLIB_H
+
+double factorial(int n);
+
+#endif //MYFIRSTCLION_FACTORIALLIB_H

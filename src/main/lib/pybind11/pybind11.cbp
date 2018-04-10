@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="pybind11" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\test\;CMake Files\src\test\lib\;CMake Files\src\test\lib\googletest\;CMake Files\src\test\lib\googletest\googlemock\;CMake Files\src\test\lib\googletest\googlemock\cmake\;CMake Files\src\test\lib\googletest\googletest\;CMake Files\src\test\lib\googletest\googletest\cmake\;CMake Files\src\main\;CMake Files\src\main\lib\;CMake Files\src\main\lib\pybind11\;CMake Files\src\main\lib\pybind11\tools\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googlemock/cmake/gmock_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googlemock\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/internal_utils.cmake">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/internal_utils.cmake">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/internal_utils.cmake">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/internal_utils.cmake">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/test/lib/googletest/googletest/cmake/gtest_main.pc.in">
+          <Option virtualFolder="CMake Files\src\test\lib\googletest\googletest\cmake\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\main\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/tools/pybind11Tools.cmake">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\tools\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/tools/FindPythonLibsNew.cmake">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\tools\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/tools/pybind11Tools.cmake">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\tools\" />
+      </Unit>
+      <Unit filename="/home/ludwig/CLionProjects/myFirstClion/src/main/lib/pybind11/tools/FindPythonLibsNew.cmake">
+          <Option virtualFolder="CMake Files\src\main\lib\pybind11\tools\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
