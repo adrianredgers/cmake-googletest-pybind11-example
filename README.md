@@ -1,4 +1,4 @@
-Example project to import a googletested C++ function into Python using pybind11 :-
+Example CLion project to import a googletested C++ function into Python using pybind11 :-
 -
 - **Python**
 - **Project targets**
@@ -77,7 +77,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 - Navigate to the new project and open it in CLion:
     - Import sources.
     - Do **not** overwrite `CMakeLists.txt`.
-- Note: `Ctrl-Shift-T` does not work for switching to tests.
+- Note: `Ctrl-Shift-T` does not work for switching to tests, but Ctrl-Shift-F10 runs tests.
 - Optional, but probably worthwhile, is marking `src` as a source directory:
     - Right-click on project window.
     - Select `Mark directory as > Project Sources and Headers`.
