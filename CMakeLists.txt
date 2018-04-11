@@ -11,7 +11,7 @@ set(TARGET_DIR ${CMAKE_SOURCE_DIR}/build)
 # script (compile.sh) to cd to a build directory and make from there.   :-(
 # TODO fix it
 
-project(myFirstClion)
+project(cmake-googletest-pybind11-example)
 set(MY_LIB FactorialLib)
 # python module name - note: same as used in PyModule.cpp
 set(MY_PY_MODULE myfactorial)
