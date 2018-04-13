@@ -13,14 +13,15 @@ include_directories(${GTEST_ROOT}/googletest/include)
 # Name of the Googletest lib we need
 set(GTEST_LIB gtest_main)
 
-# Create new runUnitTests target from test sources and link with ${GTEST}_LIB and ${MY_LIB}
-add_executable(runUnitTests ${TEST_SOURCES})
-target_link_libraries(runUnitTests ${GTEST_LIB} ${MY_LIB})
+# Create new myUnitTests target from test sources and link with ${GTEST}_LIB and ${MY_LIB}
+set(UNIT_TESTS myUnitTests)
+add_executable(${UNIT_TESTS} ${TEST_SOURCES})
+target_link_libraries(${UNIT_TESTS} ${GTEST_LIB} ${MY_LIB})
 
-# Place the runUnitTests target executable in ${TARGET_DIR}
+# Place the ${UNIT_TESTS} target executable in ${TARGET_DIR}
 # Or you can set CMAKE_xxx_OUTPUT_DIRECTORY properties globally in the top level CMakeLists.txt
 #  e.g.: set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${TARGET_DIR})
-set_target_properties(runUnitTests
+set_target_properties(${UNIT_TESTS}
         PROPERTIES
         ARCHIVE_OUTPUT_DIRECTORY ${TARGET_DIR}
         LIBRARY_OUTPUT_DIRECTORY ${TARGET_DIR}

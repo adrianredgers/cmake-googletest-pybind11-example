@@ -15,7 +15,7 @@ What a palaver! The aim is that you should be able run a `make` script, then sta
 in C++ (and tested with googletest) that has a pybind11 interface, and run a function from that module:
 ```
 $ ./compile.sh
-$ ./build/runUnitTests
+$ ./build/myUnitTests
 $ echo $?
 0
 $ python
@@ -51,7 +51,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 - `src\include`
     - `FactorialLib.h` - library include file used by `PyModule.cpp` and the tests (and any other C++ that wants to use `libFactorialLib.so`).
 - `src/test`
-    - `CMakeLists.txt` - CMake for test target: `runUnitTests`.
+    - `CMakeLists.txt` - CMake for test target: `myUnitTests`.
     - `FactorialTest.cpp` - googletests of the `FactorialLib` library.
     - `lib/googletest` - googletest source code.
         - Cloned from: `git@github.com:google/googletest.git`.
@@ -86,7 +86,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     - Optional because it means CLion puts all build artifacts in the `build` directory, instead of some of them in `cmake-build-debug`.
 - You can always delete `build` and `cmake-build-debug` and regenerate them with a rebuild.
 - CLion CMake is lazy - only builds what it uses.
-    - So it builds the `FactorialLib` and `runUnitTests` needed to run tests in CLion.
+    - So it builds the `FactorialLib` and `myUnitTests` needed to run tests in CLion.
     - But it does not build the Python module target `myfactorial`
     - Hence the need for `compile.sh`
 

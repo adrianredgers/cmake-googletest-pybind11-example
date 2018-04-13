@@ -1,5 +1,5 @@
 
-#include <Factorial.h>
+#include <FactorialLib.h>
 #include "Factorial_p.h"
 
 namespace myfactorial {

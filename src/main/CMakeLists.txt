@@ -19,17 +19,14 @@ add_library(${MY_LIB} SHARED ${MY_SOURCES})
 set(PYTHON_INCLUDE_DIR /usr/include/python2.7)
 set(PYTHON_DIST_DIR /usr/local/lib/python2.7/dist-packages)
 
-# Build the pybind11 library
-# For <Python.h> used by pybind11
-include_directories(${PYTHON_INCLUDE_DIR})
 # Build the pybind11 library from source you have previously cloned into src/main/lib/
 set(PYBIND11 lib/pybind11)
-include_directories(${PYBIND11}/include)
+include_directories(${PYTHON_INCLUDE_DIR} ${PYBIND11}/include)
 # Ghastly hack to prevent this pybind11 build from using python 3.5 :-(
 set(PYBIND11_PYTHON_VERSION 2.7 CACHE STRING "")
 add_subdirectory(${PYBIND11})
 
-# Create pybind11 module - note: module name, set up in prev CMakeLists, is same as in PyModule.cpp
+# Create our python module - note: module name, set up in prev CMakeLists, is same as in PyModule.cpp
 # TODO - Don't recompile ${MY_SOURCES}
 pybind11_add_module(${MY_PY_MODULE} PyModule.cpp ${MY_SOURCES})
 
