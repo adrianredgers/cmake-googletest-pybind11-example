@@ -1,0 +1,11 @@
+
+#ifndef CMAKE_GOOGLETEST_PYBIND11_EXAMPLE_FACTORIAL_P_H
+#define CMAKE_GOOGLETEST_PYBIND11_EXAMPLE_FACTORIAL_P_H
+
+namespace myfactorial {
+
+    double factorial(int n, double acc);
+
+}
+
+#endif //CMAKE_GOOGLETEST_PYBIND11_EXAMPLE_FACTORIAL_P_H
