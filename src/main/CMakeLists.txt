@@ -32,11 +32,8 @@ set(PYBIND11_PYTHON_VERSION 2.7 CACHE STRING "")
 add_subdirectory(${PYBIND11})
 
 # Create our python module - note: module name, set up in prev CMakeLists, is same as in PyModule.cpp
-# TODO - Don't recompile ${MY_SOURCES}
 pybind11_add_module(${MY_PY_MODULE} PyModule.cpp)
-# pybind11_add_module(${MY_PY_MODULE} PyModule.cpp ${MY_SOURCES})
 # Link ${MY_LIB} into new module - note the PRIVATE keyword
-# target_link_libraries(${MY_PY_MODULE} PRIVATE ${PYTHON_DIST_DIR}/lib${MY_LIB}.so)
 target_link_libraries(${MY_PY_MODULE} PRIVATE ${MY_LIB})
 
 # Place the targets in ${TARGET_DIR}
