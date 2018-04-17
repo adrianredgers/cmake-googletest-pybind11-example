@@ -2,6 +2,8 @@
 #include <gtest/gtest.h>
 #include <FactorialLib.h>
 
+using namespace myfactorial;
+
 
 TEST(FactorialTest, HappyCase) {
     EXPECT_EQ(120, factorial(5)) << "Testing factorial 5";
