@@ -41,7 +41,7 @@ export LD_LIBRARY_PATH=`addpath LD_LIBRARY_PATH $PYTHON_DIST_DIR`
 #
 PYTHON_MODULE=myfactorial
 rm -f $PYTHON_DIST_DIR/${PYTHON_MODULE}.so
-rm -f $PYTHON_DIST_DIR/*.so
+rm -f $PYTHON_DIST_DIR/libFactorialLib.so
 
 BUILD_DIR=build
 mkdir -p $BUILD_DIR
