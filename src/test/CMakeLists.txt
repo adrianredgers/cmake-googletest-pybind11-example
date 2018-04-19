@@ -14,6 +14,7 @@ include_directories(${GTEST_ROOT}/googletest/include)
 set(GTEST_LIB gtest_main)
 
 # Create new myUnitTests target from test sources and link with ${GTEST}_LIB and ${MY_LIB}
+# Call the target  <xx>UnitTests so that compile.sh can run it.
 set(UNIT_TESTS myUnitTests)
 add_executable(${UNIT_TESTS} ${TEST_SOURCES})
 target_link_libraries(${UNIT_TESTS} ${GTEST_LIB} ${MY_LIB})

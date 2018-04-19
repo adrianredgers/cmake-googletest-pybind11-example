@@ -6,6 +6,7 @@ Example (CLion) project to import a googletested C++ function into Python using 
 - **in-source** vs **out-of-source**:
 - **CLion tips**
 - **CMake**
+- **pybind11**
 - **Contact**
 
 
@@ -25,6 +26,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import myfactorial
 >>> myfactorial.fact(5)
 120.0
+>>> myfactorial.hello("adrian")
+Hello adrian
+>>> ll=[-2, 4.5, 2]
+>>> myfactorial.max(ll,3)
+4.5
 >>> quit()
 ``` 
 
@@ -112,6 +118,10 @@ Type "help", "copyright", "credits" or "license" for more information.
     - So we need to set `PYBIND11_PYTHON_VERSION` before you add the pybind11 sub-directory.
     - Some details of this in `https://github.com/pybind/pybind11/issues/587`.
 - Note the use of keywords like `SHARED` and `PRIVATE`.
+
+**pybind11**
+- pybind11 is quite tricky to configure.
+- https://zenodo.org/record/239703/files/pybind11%20basics.pdf
 
 
 **Contact me**

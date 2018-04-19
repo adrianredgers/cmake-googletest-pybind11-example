@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
 
-export PYTHON_DIST_DIR=/usr/local/lib/python2.7/dist-packages
-
-
-
 
 addpath () {
     if [ $# -ne 2 -a  $# -ne 3 ]
     then
         echo "Usage: addpath <PATH-VARIABLE-NAME> <ADD-THIS-TO-PATH> [after]"
-        echo "example:\n  addpath LD_LIBRARY_PATH /usr/bin after\n"
+        echo "example:"
+        echo "    LD_LIBRARY_PATH=\`addpath LD_LIBRARY_PATH /usr/bin after\`"
+        echo "Adds <ADD-THIS-TO-PATH> to colon-separated <PATH-VARIABLE-NAME> if it's not already in there."
+        echo ""
         exit 1
     fi
     path_var_name=$1
@@ -49,10 +48,11 @@ rm -rf $BUILD_DIR/*
 pushd $BUILD_DIR
 cmake ..
 make
+
+for utest in *UnitTests
+do
+    ./$utest
+done
+
 popd
-
-
-
-
-
 
