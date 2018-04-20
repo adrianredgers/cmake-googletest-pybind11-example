@@ -19,13 +19,5 @@ set(UNIT_TESTS myUnitTests)
 add_executable(${UNIT_TESTS} ${TEST_SOURCES})
 target_link_libraries(${UNIT_TESTS} ${GTEST_LIB} ${MY_LIB})
 
-# Place the ${UNIT_TESTS} target executable in ${TARGET_DIR}
-# Or you can set CMAKE_xxx_OUTPUT_DIRECTORY properties globally in the top level CMakeLists.txt
-#  e.g.: set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${TARGET_DIR})
-set_target_properties(${UNIT_TESTS}
-        PROPERTIES
-        ARCHIVE_OUTPUT_DIRECTORY ${TARGET_DIR}
-        LIBRARY_OUTPUT_DIRECTORY ${TARGET_DIR}
-        RUNTIME_OUTPUT_DIRECTORY ${TARGET_DIR})
 
 
