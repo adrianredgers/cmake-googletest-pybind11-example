@@ -36,22 +36,24 @@ Hello adrian
 
 **Project targets**
 - The script `compile.sh` builds 3 targets `FactorialLib`, `myfactorial` and `myUnitTests`
-    - It creates them in the directory `build` 
+    - It creates them in the directory `build`
     - [If you run unit tests in CLion then it also builds `FactorialLib` and `myUnitTests` (see **Clion tips** below).]
 - CMake target `FactorialLib` builds the shared library: `libFactorialLib.so` , which is used by the python module and the tests.
 - CMake target `myfactorial` compiles `PyModule.cpp`, which includes `pybind11` source, and links with `FactorialLib` to build the Python module (shared library) `myfactorial.so`
-    - A custom-command then copies it to your system's Python distribution directory.
-    - That dir is something like `/usr/local/lib/python2.7/dist-packages`. 
-    - You will need permissions to copy to the dir (I used `sudo chmod a+w`). 
-    - You should make sure your `$LD_LIBRARY_PATH` contains this distribution directory.
-        - The script `compile.sh` will attempt to do this.
+    - A custom-command then copies it to your Python distribution directory.
+    - You should make sure your `$PYTHONPATH` and `$LD_LIBRARY_PATH` contain this distribution directory.
+        - The script `compile.sh` shows how to do this idempotently.
 - CMake target `myUnitTests` is an executable that runs the unit tests outside of CLion.
+- Python looks for modules in `$PYTHONPATH`.
+    - So we need to copy `myfactorial.so` to a directory and add that directory to `$PYTHONPATH`
+- If the Python shared library module `myfactorial.so` needs another library then that needs to be in `$LD_LIBRARY_PATH`
+    - So we need to copy `libMyFactorialLib.so` to a directory and add that directory to `$LD_LIBRARY_PATH`
 
 
 **Project files**
 - `CMakeLists.txt` - top-level CMake file that calls the other `main` and `test` CMake files.
 - `compile.sh` 
-    1) idempotently adds `$PYTHON_DIST_DIR` to `$LD_LIBRARY_PATH`.
+    1) idempotently adds the user's home directory `~` to `$PYTHONPATH` and `$LD_LIBRARY_PATH`.
     2) creates the directory `build` to hold the artifacts.
     3) runs `cmake` and then `make`.
 - `src\include`
