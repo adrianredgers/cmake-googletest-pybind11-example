@@ -12,7 +12,7 @@ Example (CLion) project to import a googletested C++ function into Python using 
 
 **Python**
 
-What a palaver! The aim is that you should be able run a `make` script, then start up Python, import a module written
+What a palaver! The aim is that you should be able run a `cmake` script, then start up Python, import a module written
 in C++ (and tested with googletest) that has a pybind11 interface, and run a function from that module:
 ```
 $ ./compile.sh
@@ -35,12 +35,12 @@ Hello adrian
 ``` 
 
 **Project targets**
-- The script `compile.sh` builds 3 targets `FactorialLib`, `myfactorial` and `myUnitTests`
+- The script `compile.sh` builds 3 targets: `FactorialLib`, `myfactorial` and `myUnitTests`
     - It creates them in the directory `build`
-    - [If you run unit tests in CLion then it also builds `FactorialLib` and `myUnitTests` (see **Clion tips** below).]
+    - [If you run unit tests in CLion then CLion only builds `FactorialLib` and `myUnitTests` (see **Clion tips** below).]
 - CMake target `FactorialLib` builds the shared library: `libFactorialLib.so` , which is used by the python module and the tests.
 - CMake target `myfactorial` compiles `PyModule.cpp`, which includes `pybind11` source, and links with `FactorialLib` to build the Python module (shared library) `myfactorial.so`
-    - A custom-command then copies it to your Python distribution directory.
+    - A CMake custom-command then copies it to your Python distribution directory.
     - You should make sure your `$PYTHONPATH` and `$LD_LIBRARY_PATH` contain this distribution directory.
         - The script `compile.sh` shows how to do this idempotently.
 - CMake target `myUnitTests` is an executable that runs the unit tests outside of CLion.
@@ -107,7 +107,7 @@ Hello adrian
     - In `File menu > Settings > Build, Generation, Deployment > CMake`  set the `Generation path:` to `build`.
     - Optional because it means CLion puts all build artifacts in the directory `build`, instead of some of them in `cmake-build-debug`.
 - You can always delete `build` and `cmake-build-debug` and regenerate them with a rebuild.
-- CLion CMake is lazy - only builds what it uses.
+- CLion CMake is lazy - it only builds what it uses.
     - So it builds the `FactorialLib` and `myUnitTests` needed to run tests in CLion.
     - But it does not build the Python module target `myfactorial`
     - Hence the need for `compile.sh`
@@ -121,9 +121,9 @@ Hello adrian
     - Some details of this in `https://github.com/pybind/pybind11/issues/587`.
 - Note the use of keywords like `SHARED` and `PRIVATE`.
 
+
 **pybind11**
-- pybind11 is quite tricky to configure.
-- https://zenodo.org/record/239703/files/pybind11%20basics.pdf
+- Docco: https://zenodo.org/record/239703/files/pybind11%20basics.pdf
 
 
 **Contact me**
