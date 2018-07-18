@@ -61,7 +61,7 @@ make
 
 #
 # Run unit tests
-#
+# !!! NOTE: it is looking for tests labelled <xxx>UnitTests in CMake files !!!
 RETVAL=0
 for utest in *UnitTests
 do

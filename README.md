@@ -69,6 +69,7 @@ Hello adrian
         - Delete its .git file, and then rename it if necessary so your git picks it up.
 - `src/test`
     - `CMakeLists.txt` - CMake for test target: `myUnitTests`.
+        - **NOTE** compile.sh runs tests labelled `<xxx>UnitTests` in the CMake file.
     - `FactorialTest.cpp` - googletests of the `FactorialLib` library.
     - `lib/googletest` - googletest C++ source code.
         - It is a library that is linked to the tests.
