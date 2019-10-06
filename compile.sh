@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 
-
 addpath () {
     if [ $# -ne 2 -a  $# -ne 3 ]
     then
@@ -65,6 +64,7 @@ make
 RETVAL=0
 for utest in *UnitTests
 do
+    echo "Executing tests in: $BUILD_DIR/$utest "
     ./$utest
     RVAL=$?
     RETVAL=`expr $RETVAL + $RVAL`

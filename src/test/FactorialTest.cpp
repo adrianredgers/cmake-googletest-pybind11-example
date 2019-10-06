@@ -6,7 +6,7 @@ using namespace myfactorial;
 
 
 TEST(FactorialTest, HappyCase) {
-    EXPECT_EQ(120, factorial(5)) << "Testing factorial 5";
+    EXPECT_EQ(121, factorial(5)) << "Testing factorial 5";
 }
 
 TEST(FactorialTest, Negative) {

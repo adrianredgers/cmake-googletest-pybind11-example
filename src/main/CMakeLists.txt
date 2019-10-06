@@ -17,8 +17,6 @@ add_library(${MY_LIB} SHARED ${MY_SOURCES})
 set(PYBIND11 lib/pybind11)
 set(PYTHON_INCLUDE_DIR /usr/include/python2.7)
 include_directories(${PYTHON_INCLUDE_DIR} ${PYBIND11}/include)
-# Ghastly hack to prevent this pybind11 build from using python 3.5 :-(
-set(PYBIND11_PYTHON_VERSION 2.7 CACHE STRING "")
 add_subdirectory(${PYBIND11})
 
 # Special pybind11 CMake sauce-ry
